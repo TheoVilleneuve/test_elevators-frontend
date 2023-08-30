@@ -1,7 +1,9 @@
-import Home from '../components/Home';
+import Pannel from '../components/Pannel';
 
 function Index() {
-  return <Home />;
+  return (
+    <Pannel />
+  )
 }
 
 export default Index;
