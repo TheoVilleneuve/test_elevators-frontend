@@ -18,17 +18,17 @@ export default function BuildingTable() {
   const reqFloor = useSelector((state) => state.elevator1.value.reqFloor);
   const doorStatus = useSelector((state) => state.elevator1.value.isDoorOpen);
 
-  useEffect(() => {
-    console.log('Current floor is', currentFloor)
-  }, [currentFloor]);
+  // useEffect(() => {
+  //   console.log('Current floor is', currentFloor)
+  // }, [currentFloor]);
 
-  useEffect(() => {
-    console.log('IS DOOR OPEN ?', doorStatus)
-  }, [doorStatus]);
+  // useEffect(() => {
+  //   console.log('IS DOOR OPEN ?', doorStatus)
+  // }, [doorStatus]);
 
-  useEffect(() => {
-    console.log('REQFLOOR IS', reqFloor)
-  }, [reqFloor]);
+  // useEffect(() => {
+  //   console.log('REQFLOOR IS', reqFloor)
+  // }, [reqFloor]);
 
   const [buttonStates, setButtonStates] = useState(Array(10).fill(false));
   const [clickedFloor, setClickedFloor] = useState(null);

@@ -18,7 +18,7 @@ export default function Index() {
       .then((data) => {
         setHistory(data.moves);
         });
-  }, []);
+  }, [history]);
 
   //Display history by mapping in the results
   const requests = history.map((data, i) => {
