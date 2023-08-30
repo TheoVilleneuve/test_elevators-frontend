@@ -1,5 +1,5 @@
 .pannel {
-  background-color: gainsboro;
+  background-color: c17a4b;
   height: 60vh;
   width: 20vw;
   border-radius: 10px;
@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 10vw;
 }
 
 .btnContainer {
@@ -25,15 +26,15 @@
 }
 
 .indicator {
-  background-color: blueviolet;
+  background-color: white;
   font-family: 'Courier New', Courier, monospace;
   font-size: large;
   font-weight: 900;
-  color: white;
+  color: black;
   height: 60px;
   width: 60px;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 10px;
   border: solid rgb(22, 22, 22) 2px;
   cursor: pointer;
   transition-duration: 0.8s;

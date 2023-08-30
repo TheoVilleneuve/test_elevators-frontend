@@ -1,0 +1,54 @@
+  .header {
+    background-color: #C5926F;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+  
+  .tokenAuthContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    height: 80%;
+    width: 50%;
+  }
+  
+  .authInput {
+    margin-right: 2%;
+    height: 85%;
+    width: 45%;
+    border-radius: 5px;
+    border: 2px solid #F0F0F5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .authInput:hover {
+    height: 85%;
+    width: 45%;
+    border: 2px solid #c17a4b;
+  }
+  
+  .authButton {
+    background-color: #C5926F;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 80%;
+    width: 20%;
+    padding: 0 5%;
+    margin-left: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8vh;
+    color: white;
+    cursor: pointer;
+    transition-duration: 1s;
+  }
+  
+  .authButton:hover {
+    background-color: #c17a4b;
+    border: 2px solid #c17a4b(0, 98, 255);
+  }
+  

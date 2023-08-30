@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     value: {
-        currentPosition: null,
+        currentPosition: 3,
         reqFloor: null, 
         isDoorOpen: false,
     },
@@ -18,6 +18,9 @@ export const elevator1Slice = createSlice({
         updateReqFloor: (state, action) => {
             state.value.reqFloor = action.payload;
         },
+        resetReqFloor: (state, action) => {
+            state.value.reqFloor = null
+        },
         openDoor: (state) => {
             state.value.isDoorOpen = true;
         },
@@ -27,5 +30,5 @@ export const elevator1Slice = createSlice({
     },
    });
 
-   export const { updateCurrentPosition, updateReqFloor, openDoor, shutDoor } = elevator1Slice.actions;
+   export const { updateCurrentPosition, updateReqFloor, resetReqFloor, openDoor, shutDoor } = elevator1Slice.actions;
    export default elevator1Slice.reducer;
