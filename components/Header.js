@@ -14,10 +14,43 @@ export default function Header() {
   const [userID, setUserID] = useState(null);
   const [userName, setUserName] = useState("");
 
+  //LOGIN
+  const handleConnection = () => {
+    fetch("https://test-elevators-backend.vercel.app/users/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, password: password }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          setUserName(data.username);
+          setToken(data.token);
+          setUserID(data.id);
+          setLoginStatus(true);
+          dispatch(
+            login({
+              id: data.id,
+              token: data.token,
+              username: data.username,
+            })
+          );
+        }
+      });
+  };
+
+  //LOGOUT
+  const handleLogOut = () => {
+    setLoginStatus(false)
+    setToken("");
+    setUserName("")
+    setUserID(null);
+    dispatch(logout());
+  };
+
   return (
     <>
       <div className={styles.header}>
-
         {loginStatus === false && (
           <div className={styles.tokenAuthContainer}>
             <input
@@ -51,8 +84,14 @@ export default function Header() {
         {loginStatus === true && (
           <div className={styles.tokenAuthContainer}>
             <div>
-              <h3 style={{ color: "white" }}>
-                Welcome {userName} (ID:{userID}){" "}
+              <h3
+                style={{
+                  alignSelf: "center",
+                  justifySelf: "center",
+                  color: "white",
+                }}
+              >
+                Welcome {userName} !{" "}
               </h3>
             </div>
 

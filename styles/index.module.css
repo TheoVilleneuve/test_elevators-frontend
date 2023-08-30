@@ -12,3 +12,21 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.historyContainer {
+    background-color: #c17a4b;
+    width: 80vw;
+    height: 10vh;
+    border-radius: 10px;
+    align-self: center;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: white;
+}

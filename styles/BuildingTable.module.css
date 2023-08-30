@@ -1,5 +1,6 @@
 .buildingTable {
-  background-color: blue;
+  background-color: white;
+  border: solid #C5926F 1.5px;
   height: 80vh;
   width: 50vw;
   border-radius: 10px;
@@ -11,7 +12,6 @@
 }
 
 .table {
-  background-color: beige;
   width: 90%;
   height: 90%;
   border-collapse: collapse;
@@ -19,9 +19,10 @@
 
 .table th,
 .table td {
-  border: 1px solid black;
+  border: 1px solid #C5926F;
   padding: 4px;
   text-align: center;
+  font-size: large;
 }
 
 .callBtn {

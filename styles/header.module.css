@@ -3,14 +3,14 @@
     width: 100vw;
     height: 8vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 5%;
   }
   
   .tokenAuthContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: auto;
     height: 80%;
@@ -28,7 +28,7 @@
   
   .authInput:hover {
     height: 85%;
-    width: 45%;
+    width: 100%;
     border: 2px solid #c17a4b;
   }
   
