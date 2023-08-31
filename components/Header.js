@@ -41,9 +41,9 @@ export default function Header() {
 
   //LOGOUT
   const handleLogOut = () => {
-    setLoginStatus(false)
+    setLoginStatus(false);
     setToken("");
-    setUserName("")
+    setUserName("");
     setUserID(null);
     dispatch(logout());
   };
@@ -80,7 +80,7 @@ export default function Header() {
             </button>
           </div>
         )}
-
+        {/* Conditionnal display if user is logged */}
         {loginStatus === true && (
           <div className={styles.tokenAuthContainer}>
             <div>

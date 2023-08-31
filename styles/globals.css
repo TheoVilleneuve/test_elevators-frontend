@@ -8,11 +8,11 @@ body {
 }
 
 button {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: large;
   font-weight: 900;
   color: white;
-  background-color:#C5926F;
+  background-color: #c5926f;
   height: 60px;
   width: 60px;
   margin: 5px;
@@ -23,7 +23,7 @@ button {
 }
 
 button:hover {
-  background-color:#e9dbd2;
+  background-color: #e9dbd2;
 }
 
 p {

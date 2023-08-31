@@ -1,6 +1,6 @@
 .pannel {
   background-color: white;
-  border: solid #C5926F 1.5px;
+  border: solid #c5926f 1.5px;
   height: 60vh;
   width: 28vw;
   border-radius: 10px;
@@ -27,21 +27,16 @@
 
 .indicator {
   background-color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: large;
   font-weight: 900;
-
   height: 60px;
   width: 60px;
   margin: 5px;
   border-radius: 10px;
-  border: solid #C5926F 3px;
+  border: solid #c5926f 3px;
   font-size: 3vh;
-  cursor: pointer;
-  transition-duration: 0.8s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-

@@ -1,6 +1,6 @@
 .buildingTable {
   background-color: white;
-  border: solid #C5926F 1.5px;
+  border: solid #c5926f 1.5px;
   height: 80vh;
   width: 50vw;
   border-radius: 10px;
@@ -19,7 +19,7 @@
 
 .table th,
 .table td {
-  border: 1px solid #C5926F;
+  border: 1px solid #c5926f;
   padding: 4px;
   text-align: center;
   font-size: large;

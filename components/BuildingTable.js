@@ -12,24 +12,14 @@ import {
 export default function BuildingTable() {
   const dispatch = useDispatch();
 
+  //Global states
   const currentFloor = useSelector(
     (state) => state.elevator1.value.currentPosition
   );
   const reqFloor = useSelector((state) => state.elevator1.value.reqFloor);
   const doorStatus = useSelector((state) => state.elevator1.value.isDoorOpen);
 
-  // useEffect(() => {
-  //   console.log('Current floor is', currentFloor)
-  // }, [currentFloor]);
-
-  // useEffect(() => {
-  //   console.log('IS DOOR OPEN ?', doorStatus)
-  // }, [doorStatus]);
-
-  // useEffect(() => {
-  //   console.log('REQFLOOR IS', reqFloor)
-  // }, [reqFloor]);
-
+  //Local states
   const [buttonStates, setButtonStates] = useState(Array(10).fill(false));
   const [clickedFloor, setClickedFloor] = useState(null);
 
@@ -39,16 +29,18 @@ export default function BuildingTable() {
     if (reqFloor.length > 0) {
       const nextFloor = reqFloor[0];
       dispatch(shutDoor());
+      //Elevator will go up (incrementation)
       if (currentFloor < nextFloor) {
         setTimeout(() => {
           dispatch(updateCurrentPosition(currentFloor + 1));
         }, 1000);
+        //Elevator will go down (decrementation)
       } else if (currentFloor > nextFloor) {
         setTimeout(() => {
           dispatch(updateCurrentPosition(currentFloor - 1));
         }, 1000);
-      } else {
         // Current floor ok
+      } else {
         dispatch(deleteReqFloor(nextFloor));
         dispatch(openDoor());
         setClickedFloor(null);
@@ -59,6 +51,7 @@ export default function BuildingTable() {
     }
   }, [currentFloor, reqFloor]);
 
+  // Function onClick to call the elevator
   const handleCallElevator = (floor) => {
     dispatch(updateReqFloor(floor));
     setClickedFloor(floor);
@@ -68,6 +61,7 @@ export default function BuildingTable() {
     );
     setButtonStates(newButtonStates);
 
+    //Save in DB the request if the elevator has a move to make
     if (currentFloor !== floor) {
       fetch(
         `https://test-elevators-backend.vercel.app/elevatorHistory/addmove/elevator1/${currentFloor}/${floor}`,
