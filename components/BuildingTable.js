@@ -91,7 +91,7 @@ export default function BuildingTable() {
         </thead>
         <tbody>
           {Array.from({ length: nbrOfFloors }, (_, index) => {
-            const floorNumber = index + 1;
+            const floorNumber = nbrOfFloors - index; // Inversion de l'ordre
             return (
               <tr key={floorNumber}>
                 <td>Floor n°{floorNumber}</td>
